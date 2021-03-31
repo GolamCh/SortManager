@@ -9,12 +9,9 @@ public class MergeSort implements Sorter {
 
 
     public int[] sortArray(int[] arrayToSort){
-        /*if (arrayToSort.length == 0) {
-           throw new EmptyArrayException();
-        }*/
         try {
             if (arrayToSort.length == 0) {
-                throw new EmptyArrayException();
+                throw new EmptyArrayException("Empty Array!");
             }
         } catch (EmptyArrayException e) {
             App.logger.error(e.getMessage(), e);
@@ -57,15 +54,11 @@ public class MergeSort implements Sorter {
     }
 
     private static int[] merge(int[] arrayL, int[] arrayR) {
-
         int[] result = new int[arrayL.length + arrayR.length];
-
         int leftIndex = 0;
         int rightIndex = 0;
         int resultIndex = 0;
-
         while (leftIndex < arrayL.length || rightIndex < arrayR.length) {
-
             if (leftIndex < arrayL.length && rightIndex < arrayR.length) {
                 if (arrayL[leftIndex] < arrayR[rightIndex]) {
                     result[resultIndex] = arrayL[leftIndex];

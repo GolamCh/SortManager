@@ -1,14 +1,13 @@
 package com.sparta.golam.testing;
 
+
 import com.sparta.golam.sorters.BubbleSort;
-import com.sparta.golam.utilities.ArrayGenerator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class BubbleTest {
     BubbleSort bubbleSort = new BubbleSort();
-    int[] randomArray = ArrayGenerator.randomArray(20);
 
     @Test
     @DisplayName("Testing if the bubble sort sorts an array")

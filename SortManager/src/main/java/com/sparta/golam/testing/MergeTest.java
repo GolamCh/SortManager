@@ -1,5 +1,6 @@
 package com.sparta.golam.testing;
 
+
 import com.sparta.golam.sorters.MergeSort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -19,4 +20,5 @@ public class MergeTest {
     public void shouldReturnOrderedArrayOdd() {
         Assertions.assertArrayEquals(new int[] {0,1,2,3,4,5,6,7,8}, mergeSort.sortArray(new int[] {0,1,2,3,4,5,6,7,8}));
     }
+
 }

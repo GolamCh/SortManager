@@ -12,8 +12,10 @@ public class BubbleSort implements Sorter {
             try {
                 int arrayLength = arrayToSort.length;
                 if (arrayLength == 0) {
+                    //App.logger.error(e.getMessage(), e);
                     throw new EmptyArrayException();
                 } else if (arrayLength == 1) {
+                    //App.logger.error(e.getMessage(), e);
                     throw new SingleValueException();
                 }
                 if (OrderedChecker.isOrdered(arrayToSort)) {
@@ -31,12 +33,14 @@ public class BubbleSort implements Sorter {
                 }
             } catch (EmptyArrayException e) {
                 App.logger.error(e.getMessage(), e);
+                System.out.println(e.getMessage());
             } catch (SingleValueException e) {
                 App.logger.error(e.getMessage(), e);
             } catch (Exception e) {
                 App.logger.error(e);
             }
             return arrayToSort;
+
         }
 
 
