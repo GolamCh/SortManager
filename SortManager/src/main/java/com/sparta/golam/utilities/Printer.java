@@ -19,4 +19,8 @@ public class Printer {
     public static void printArray(int[] arrayToPrint) {
         System.out.println(Arrays.toString(arrayToPrint));
     }
+
+    public static void printSameLine(Object toPrint) {
+        System.out.print(toPrint);
+    }
 }

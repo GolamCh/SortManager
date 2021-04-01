@@ -1,4 +1,4 @@
-package com.sparta.golam.interfaces;
+package com.sparta.golam.binarytree;
 
 public interface BinaryTree {
     int getRootElement();
@@ -13,7 +13,7 @@ public interface BinaryTree {
 
     //int getLeftChild(int element) throws ChildNotFoundException;
 
-    //int getRightChild(int element)throws ChildNotFoundException;
+    //int getRightChild(int element) throws ChildNotFoundException;
 
     int[] getSortedTreeAsc();
 

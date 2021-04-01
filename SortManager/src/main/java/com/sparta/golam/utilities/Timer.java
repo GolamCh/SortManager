@@ -5,12 +5,13 @@ import com.sparta.golam.sorters.MergeSort;
 
 public class Timer {
 
-    private static long timeBubbleSort(int[] array) {
+    public static long timeBubbleSort(int[] array) {
         BubbleSort bubbleSort = new BubbleSort();
         long startTime = System.nanoTime();
         bubbleSort.sortArray(array);
         long endTime = System.nanoTime();
-        long totalTime = (endTime - startTime)/1000;
+        long totalTime = (endTime - startTime);
+        Printer.print("Bubble Sort completion time: " + totalTime + "×10^-9 s");
         return totalTime;
     }
 
@@ -19,7 +20,8 @@ public class Timer {
         long startTime = System.nanoTime();
         mergeSort.sortArray(array);
         long endTime = System.nanoTime();
-        long totalTime = (endTime - startTime)/1000;
+        long totalTime = (endTime - startTime);
+        Printer.print("Merge Sort completion time: " + totalTime + "×10^-9 s");
         return totalTime;
     }
 
@@ -27,8 +29,8 @@ public class Timer {
         long bubbleTime = timeBubbleSort(array);
         long mergeTime = timeMergeSort(array);
         long difference;
-        Printer.print("The bubble sorter completed the sort in: "+bubbleTime+"×10^-9 s");
-        Printer.print("The merge sorter completed the sort in: "+mergeTime+"×10^-9 s");
+        //Printer.print("The bubble sorter completed the sort in: "+bubbleTime+"×10^-9 s");
+        //Printer.print("The merge sorter completed the sort in: "+mergeTime+"×10^-9 s");
         if (bubbleTime > mergeTime) {
             difference = bubbleTime - mergeTime;
             Printer.print("Merge Sort was quicker by: " + difference + "×10^-9 s");

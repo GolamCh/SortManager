@@ -1,8 +1,7 @@
 package com.sparta.golam.sorters;
 
-import com.sparta.golam.testing.App;
+import com.sparta.golam.logging.App;
 import com.sparta.golam.exceptions.EmptyArrayException;
-import com.sparta.golam.interfaces.Sorter;
 
 public class MergeSort implements Sorter {
 

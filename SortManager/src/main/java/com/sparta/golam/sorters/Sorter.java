@@ -1,4 +1,4 @@
-package com.sparta.golam.interfaces;
+package com.sparta.golam.sorters;
 
 import com.sparta.golam.exceptions.EmptyArrayException;
 

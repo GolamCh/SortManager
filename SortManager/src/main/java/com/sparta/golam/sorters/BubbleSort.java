@@ -1,9 +1,8 @@
 package com.sparta.golam.sorters;
 
-import com.sparta.golam.testing.App;
+import com.sparta.golam.logging.App;
 import com.sparta.golam.exceptions.EmptyArrayException;
 import com.sparta.golam.exceptions.SingleValueException;
-import com.sparta.golam.interfaces.Sorter;
 import com.sparta.golam.utilities.OrderedChecker;
 
 public class BubbleSort implements Sorter {

@@ -1,4 +1,4 @@
-package com.sparta.golam.testing;
+package com.sparta.golam.logging;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

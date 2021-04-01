@@ -1,4 +1,4 @@
-package com.sparta.golam.testing;
+package com.sparta.golam;
 
 
 import com.sparta.golam.sorters.MergeSort;

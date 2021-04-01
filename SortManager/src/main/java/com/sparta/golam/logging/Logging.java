@@ -1,6 +1,4 @@
-package com.sparta.golam.testing;
-
-import com.sparta.golam.testing.App;
+package com.sparta.golam.logging;
 
 public class Logging {
     public void runExceptions(){
