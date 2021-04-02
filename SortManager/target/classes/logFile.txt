@@ -1,10 +1,1 @@
-[ERROR] 2021-03-31 23:22:43.170 [main] App - The array is empty, enter an array with values.
-com.sparta.golam.exceptions.EmptyArrayException: The array is empty, enter an array with values.
-	at com.sparta.golam.sorters.BubbleSort.sortArray(BubbleSort.java:16) [classes/:?]
-	at com.sparta.golam.Starter.starter(Starter.java:38) [classes/:?]
-	at com.sparta.golam.Main.main(Main.java:7) [classes/:?]
-[ERROR] 2021-03-31 23:22:43.180 [main] App - Empty Array!
-com.sparta.golam.exceptions.EmptyArrayException: Empty Array!
-	at com.sparta.golam.sorters.MergeSort.sortArray(MergeSort.java:14) [classes/:?]
-	at com.sparta.golam.Starter.starter(Starter.java:39) [classes/:?]
-	at com.sparta.golam.Main.main(Main.java:7) [classes/:?]
+[ERROR] 2021-04-02 16:04:36.624 [main] App - EmptyArrayException: Empty Array

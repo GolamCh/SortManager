@@ -1,5 +1,7 @@
 package com.sparta.golam;
 
+import com.sparta.golam.exceptions.EmptyArrayException;
+import com.sparta.golam.exceptions.SingleValueException;
 import com.sparta.golam.sorters.BubbleSort;
 import com.sparta.golam.sorters.MergeSort;
 import com.sparta.golam.utilities.ArrayGenerator;
@@ -8,7 +10,7 @@ import com.sparta.golam.utilities.Timer;
 
 public class Execute {
 
-    public static void demoBubbleRandomArray(int lengthOfArray){
+    public static void demoBubbleRandomArray(int lengthOfArray) throws SingleValueException, EmptyArrayException {
         BubbleSort bubbleSort = new BubbleSort();
         int[] arrayToSort = ArrayGenerator.randomArray(lengthOfArray);
         Printer.print("-------------------- Bubble Sort --------------------");
@@ -25,7 +27,7 @@ public class Execute {
         Printer.print("-----------------------------------------------------");
     }
 
-    public static void demoMergeRandomArray(int lengthOfArray) {
+    public static void demoMergeRandomArray(int lengthOfArray) throws EmptyArrayException {
         MergeSort mergeSort = new MergeSort();
         int[] arrayToSort = ArrayGenerator.randomArray(lengthOfArray);
         Printer.print("-------------------- Merge Sort --------------------");
@@ -41,7 +43,7 @@ public class Execute {
         Printer.print("-----------------------------------------------------");
     }
 
-    public static void compareSorts(int lengthOfArray) {
+    public static void compareSorts(int lengthOfArray) throws SingleValueException, EmptyArrayException {
         MergeSort mergeSort = new MergeSort();
         int[] arrayToSort = ArrayGenerator.randomArray(lengthOfArray);
         Printer.print("-------------------- Bubble Sort & Merge Sort --------------------");

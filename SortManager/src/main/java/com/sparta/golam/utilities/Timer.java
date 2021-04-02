@@ -1,11 +1,13 @@
 package com.sparta.golam.utilities;
 
+import com.sparta.golam.exceptions.EmptyArrayException;
+import com.sparta.golam.exceptions.SingleValueException;
 import com.sparta.golam.sorters.BubbleSort;
 import com.sparta.golam.sorters.MergeSort;
 
 public class Timer {
 
-    public static long timeBubbleSort(int[] array) {
+    public static long timeBubbleSort(int[] array) throws SingleValueException, EmptyArrayException {
         BubbleSort bubbleSort = new BubbleSort();
         long startTime = System.nanoTime();
         bubbleSort.sortArray(array);
@@ -15,7 +17,7 @@ public class Timer {
         return totalTime;
     }
 
-    public static long timeMergeSort(int[] array) {
+    public static long timeMergeSort(int[] array) throws EmptyArrayException {
         MergeSort mergeSort = new MergeSort();
         long startTime = System.nanoTime();
         mergeSort.sortArray(array);
@@ -25,7 +27,7 @@ public class Timer {
         return totalTime;
     }
 
-    public static void compareTimes(int[] array) {
+    public static void compareTimes(int[] array) throws SingleValueException, EmptyArrayException {
         long bubbleTime = timeBubbleSort(array);
         long mergeTime = timeMergeSort(array);
         long difference;

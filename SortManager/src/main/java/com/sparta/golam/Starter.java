@@ -1,6 +1,8 @@
 package com.sparta.golam;
 
+import com.sparta.golam.binarytree.BinarySearchTree;
 import com.sparta.golam.exceptions.EmptyArrayException;
+import com.sparta.golam.exceptions.SingleValueException;
 import com.sparta.golam.sorters.BubbleSort;
 import com.sparta.golam.sorters.MergeSort;
 import com.sparta.golam.utilities.ArrayGenerator;
@@ -9,11 +11,15 @@ import com.sparta.golam.utilities.Timer;
 
 public class Starter {
 
-    public static void starter() {
+    public static void starter() throws SingleValueException, EmptyArrayException {
 
         Execute.demoBubbleRandomArray(10);
         Execute.demoMergeRandomArray(10);
         Execute.compareSorts(10);
+
+        //Execute.demoMergeRandomArray(0);
+
+        BinarySearchTree.createBinaryTree();
 
     }
 }
