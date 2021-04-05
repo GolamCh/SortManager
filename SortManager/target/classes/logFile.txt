@@ -1,1 +1,1 @@
-[ERROR] 2021-04-02 16:04:36.624 [main] App - EmptyArrayException: Empty Array
+[ERROR] 2021-04-05 20:45:56.709 [main] App - ChildNotFoundException: Node has no left child
