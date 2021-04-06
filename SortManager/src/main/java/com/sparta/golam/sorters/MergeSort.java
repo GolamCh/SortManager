@@ -11,30 +11,22 @@ public class MergeSort implements Sorter {
         } else if (arrayToSort.length == 1) {
             return arrayToSort;
         }
-        // Defining some important arrayToSort dimensions
         int arrayLength = arrayToSort.length;
         int arrayHalfLength = arrayLength / 2;
-        // Creating empty arrayToSort splits
         int[] arrayR;
         int[] arrayL = new int[arrayHalfLength];
         if (arrayLength % 2 == 0) {
-            // Split will be equal if arrayToSort length is even
             arrayR = new int[arrayHalfLength];
         } else {
-            // First split will hold the extra value if arrayToSort length is odd
             arrayR = new int[arrayHalfLength + 1];
         }
-        // Populating the arrays
-        // Separate for-loops to account for possible differing arrayToSort lengths
         for (int i = 0; i < arrayL.length; i++) {
             arrayL[i] = arrayToSort[i];
         }
         for (int j = 0; j < arrayR.length; j++) {
             arrayR[j] = arrayToSort[arrayHalfLength + j];
         }
-        // Creating an empty results arrayToSort
         int[] result = new int[arrayLength];
-        // Recursion
         arrayL = sortArray(arrayL);
         arrayR = sortArray(arrayR);
 
@@ -42,53 +34,6 @@ public class MergeSort implements Sorter {
 
         return result;
     }
-
-
-
-/*    public int[] sortArray(int[] arrayToSort){
-        try {
-            if (arrayToSort.length == 0) {
-                throw new EmptyArrayException("Empty Array!");
-            }
-        } catch (EmptyArrayException e) {
-            App.logger.error(e.getMessage(), e);
-        } catch (Exception e) {
-            App.logger.error(e);
-        }
-        if (arrayToSort.length <= 1) {
-            return arrayToSort;
-        }
-        // Defining some important arrayToSort dimensions
-        int arrayLength = arrayToSort.length;
-        int arrayHalfLength = arrayLength / 2;
-        // Creating empty arrayToSort splits
-        int[] arrayR;
-        int[] arrayL = new int[arrayHalfLength];
-        if (arrayLength % 2 == 0) {
-            // Split will be equal if arrayToSort length is even
-            arrayR = new int[arrayHalfLength];
-        } else {
-            // First split will hold the extra value if arrayToSort length is odd
-            arrayR = new int[arrayHalfLength + 1];
-        }
-        // Populating the arrays
-        // Separate for-loops to account for possible differing arrayToSort lengths
-        for (int i = 0; i < arrayL.length; i++) {
-            arrayL[i] = arrayToSort[i];
-        }
-        for (int j = 0; j < arrayR.length; j++) {
-            arrayR[j] = arrayToSort[arrayHalfLength + j];
-        }
-        // Creating an empty results arrayToSort
-        int[] result = new int[arrayLength];
-        // Recursion
-        arrayL = sortArray(arrayL);
-        arrayR = sortArray(arrayR);
-
-        result = merge(arrayL, arrayR);
-
-        return result;
-    }*/
 
     private static int[] merge(int[] arrayL, int[] arrayR) {
         int[] result = new int[arrayL.length + arrayR.length];

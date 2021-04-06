@@ -1,7 +1,6 @@
 package com.sparta.golam.binarytree;
 
 import com.sparta.golam.exceptions.ChildNotFoundException;
-import com.sparta.golam.exceptions.DuplicateNodeException;
 import com.sparta.golam.exceptions.EmptyTreeException;
 
 public interface BinaryTree {
@@ -9,7 +8,7 @@ public interface BinaryTree {
 
     int getNumberOfElements();
 
-    void addElement(int element) throws DuplicateNodeException;
+    void addElement(int element);
 
     void addElements(int[] elements);
 

@@ -26,17 +26,10 @@ public class BinaryTreeTest {
         Assertions.assertTrue(bt.findElement(33));
     }
 
-    /*@Test
-    public void rightChildNotFoundTest(){
-        Exception e = assertThrows(ChildNotFoundException.class, () -> bt.getRightChild(6));
-        assertEquals("This node has no child here!", e.getMessage());
-    }
-
     @Test
-    public void leftChildNotFoundTest() {
-        Exception e = assertThrows(ChildNotFoundException.class, () -> bt.getLeftChild(4));
-        assertEquals("This node has no child here!", e.getMessage());
-    }*/
+    public void shouldReturnNumberOfNodes() {
+        Assertions.assertEquals(6, bt.getNumberOfElements());
+    }
 
     @Test
     public void getLeftChildTest() throws ChildNotFoundException {

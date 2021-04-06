@@ -180,7 +180,6 @@ public class BinarySearchTree implements BinaryTree{
             if (this.left != null) {
                 this.left.inOrder();
             }
-            //treeSort.add(this.value);
             TreeSort.treeSort.add(this.value);
             if (this.right != null) {
                 this.right.inOrder();

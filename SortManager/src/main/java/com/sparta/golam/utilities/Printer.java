@@ -23,4 +23,8 @@ public class Printer {
     public static void printSameLine(Object toPrint) {
         System.out.print(toPrint);
     }
+
+    public static void printArraySameLine(int[] arrayToPrint) {
+        System.out.print(Arrays.toString(arrayToPrint));
+    }
 }
